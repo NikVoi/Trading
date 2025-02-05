@@ -1,35 +1,33 @@
 import { BOTS_IMG } from '@/constants/values'
-import { useEffect, useState } from 'react'
 import styles from './Bots.module.css'
 
-const Bots = ({ bots, active, setSelectedBot, selectedBot }) => {
-	const [updatedBots, setUpdatedBots] = useState(bots)
-
-	useEffect(() => {
-		setUpdatedBots(bots.map(bot => ({ ...bot, value: bot[active] })))
-	}, [active, bots])
+const Bots = ({ bots = [], active, setSelectedBot, selectedBot }) => {
+	if (!bots.length) return <p className={styles.noBots}>Боты не найдены</p>
 
 	return (
 		<ul className={styles.botsContainer}>
-			{updatedBots.map((bot, index) => {
-				const botNameKey = bot.name.toLowerCase().replace('_', '')
+			{bots.map((bot, index) => {
+				if (!bot) return null
+
+				const botNameKey = bot.name?.toLowerCase().replace('_', '') || 'default'
 				const src = BOTS_IMG[botNameKey] || BOTS_IMG.default
-				const isSelected = selectedBot.name === bot.name
+				const isSelected = selectedBot?.name === bot.name
+				const value = bot[active] ?? 0
 
 				return (
 					<li
-						key={index}
+						key={bot.id || index}
 						onClick={() => setSelectedBot(bot)}
 						className={`${styles.botItem} ${isSelected ? styles.selected : ''}`}
 					>
-						<img src={src} className={styles.botImage} />
+						<img src={src} className={styles.botImage} alt={bot.name} />
 						<span className={styles.botName}>{bot.name.replace('_', ' ')}</span>
 						<span
 							className={
-								bot.value >= 0 ? styles.positiveValue : styles.negativeValue
+								value >= 0 ? styles.positiveValue : styles.negativeValue
 							}
 						>
-							{bot.value}%
+							{value}%
 						</span>
 					</li>
 				)
