@@ -7,8 +7,8 @@ const Header = () => {
 		>
 			<button className='w-20 h-16 flex justify-center items-center'>
 				<span className='block w-10 h-1 bg-[white] relative'>
-					<span className='before:block before:w-10 before:h-1 before:bg-[white] before:content-"" before:absolute before:top-[-10px]'></span>
-					<span className='after:block after:w-10 after:h-1 after:bg-[white] after:content-"" after:absolute after:bottom-[-10px]'></span>
+					<span className='before:block before:w-10 before:h-1 before:bg-[white] before:content-"" before:absolute before:top-[-8px]'></span>
+					<span className='after:block after:w-10 after:h-1 after:bg-[white] after:content-"" after:absolute after:bottom-[-8px]'></span>
 				</span>
 			</button>
 

@@ -20,3 +20,12 @@ export const TIME_LABELS = {
 	'30d': '30 days',
 	all_time: 'All time',
 }
+
+export const BOTS_COLOR = {
+	yellowbot: '#ffff00',
+	whitebot: '#000',
+	greenbot: '#008000',
+	redbot: '#ff0000',
+	bluebot: '#0000ff',
+	orangebot: '#ffa500',
+}

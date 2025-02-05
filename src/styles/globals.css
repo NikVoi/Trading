@@ -50,7 +50,7 @@ body,
 input,
 button,
 textarea {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 input::-ms-clear {
@@ -85,13 +85,4 @@ ul li {
 
 img {
 	vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 400;
 }

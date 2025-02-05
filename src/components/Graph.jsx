@@ -46,7 +46,7 @@ const Graph = ({ chartData }) => {
 					/>
 					<defs>
 						<linearGradient id='gradient' x1='0' y1='0' x2='0' y2='1'>
-							<stop offset='0%' stopColor='#00BFFF' stopOpacity={1} />
+							<stop offset='0%' stopColor='#00BFFF' stopOpacity={0.5} />
 							<stop offset='90%' stopColor='#00BFFF' stopOpacity={0} />
 						</linearGradient>
 					</defs>

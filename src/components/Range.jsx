@@ -1,5 +1,4 @@
 import { TIME, TIME_LABELS } from '@/constants/values'
-import styles from './range.module.css'
 
 const Range = ({ active, setActive }) => {
 	return (
@@ -10,7 +9,7 @@ const Range = ({ active, setActive }) => {
 			{TIME.map(item => (
 				<button
 					key={item}
-					className={`${styles.button} ${
+					className={`flex justify-center items-center text-xl transition-all duration-300 border-b border-solid border-pink-500 rounded-3xl px-5 py-1 ${
 						active === item ? 'opacity-100' : 'opacity-50'
 					}`}
 					onClick={() => setActive(item)}
