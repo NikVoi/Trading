@@ -1,16 +1,14 @@
 .rangeContainer {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
+	padding: 1.5rem;
 	gap: 5px;
 }
 
 .rangeTitle {
 	font-size: 1.4rem;
-	font-weight: bold;
 	opacity: 0.5;
-	padding: 0.5rem;
 	border-radius: 8px;
 }
 
@@ -21,7 +19,7 @@
 	font-size: 1rem;
 	border: 1px solid white;
 	border-radius: 24px;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1.2rem;
 	opacity: 0.5;
 	cursor: pointer;
 }
@@ -32,4 +30,5 @@
 
 .active {
 	opacity: 1;
+	font-weight: bold;
 }
