@@ -14,7 +14,7 @@ const Bots = ({ bots, active, setSelectedBot }) => {
 				<li
 					key={index}
 					onClick={() => setSelectedBot(bot)}
-					className='flex flex-col justify-center items-center min-w-[32%] min-h-[120px] bg-[#1b293e] rounded-xl text-xl font-bold cursor-pointer hover:bg-[#25364f] transition-all'
+					className='flex flex-col justify-center items-center min-w-[30%] min-h-[100px] bg-[#1b293e] rounded-xl text-xl font-bold cursor-pointer hover:bg-[#25364f] transition-all'
 				>
 					<LiaRobotSolid className='text-5xl' />
 					<span className='uppercase'>{bot.name.replace('_', ' ')}</span>

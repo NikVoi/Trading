@@ -15,7 +15,6 @@ const Dashboard = () => {
 			value: bot[active],
 		}))
 	)
-	console.log(jsonData)
 
 	const handleBotClick = bot => {
 		setSelectedBot(bot)
@@ -24,7 +23,7 @@ const Dashboard = () => {
 		)
 	}
 	return (
-		<section className='flex-1 flex flex-col justify-around'>
+		<section className='flex-1 flex flex-col justify-evenly'>
 			<Capital
 				trading_capital={jsonData.trading_capital}
 				balance={jsonData.balance}
