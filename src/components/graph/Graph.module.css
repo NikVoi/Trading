@@ -1,0 +1,31 @@
+.graphContainer {
+	width: 100%;
+	color: white;
+	min-height: 200px;
+}
+
+@media (min-width: 640px) {
+	.graphContainer {
+		min-height: 250px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.graphContainer {
+		min-height: 300px;
+	}
+}
+
+.xAxis {
+	opacity: 0.5;
+}
+
+.tooltip {
+	border-radius: 8px;
+	font-size: 1.25rem;
+	color: #32cd32;
+}
+
+.tooltipText {
+	font-weight: bold;
+}

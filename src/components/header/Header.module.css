@@ -1,0 +1,73 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	height: 30px;
+	opacity: 0.5;
+	margin-top: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.header::before {
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-color: #3b82f6;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: -50%;
+	transform: translate(-50%, -60%);
+	filter: blur(40px);
+}
+
+.menuButton {
+	width: 20px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menuIcon {
+	display: block;
+	width: 20px;
+	height: 1px;
+	background-color: white;
+	position: relative;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+}
+
+.menuIcon::before {
+	top: -7px;
+	left: 0;
+}
+
+.menuIcon::after {
+	bottom: -7px;
+	left: 0;
+}
+
+.title {
+	position: relative;
+	z-index: 10;
+	font-weight: bold;
+
+	font-size: 2rem;
+}
+
+.reloadButton {
+	width: 40px;
+	transform: rotate(-20deg) scaleX(-1);
+	font-size: 2rem;
+}

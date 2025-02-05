@@ -6,12 +6,13 @@ import {
 	XAxis,
 	YAxis,
 } from 'recharts'
+import styles from './Graph.module.css'
 
 const CustomTooltip = ({ active, payload }) => {
 	if (active && payload && payload.length) {
 		return (
-			<div className=' rounded-lg text-xl text-green-400'>
-				<p className='font-bold'>{`${payload[0].value}%`}</p>
+			<div className={styles.tooltip}>
+				<p className={styles.tooltipText}>{`${payload[0].value}%`}</p>
 			</div>
 		)
 	}
@@ -20,14 +21,14 @@ const CustomTooltip = ({ active, payload }) => {
 
 const Graph = ({ chartData }) => {
 	return (
-		<div className='w-full text-white '>
-			<ResponsiveContainer width='100%' height={200}>
+		<div className={styles.graphContainer}>
+			<ResponsiveContainer width='100%'>
 				<AreaChart data={chartData}>
 					<XAxis
 						dataKey='date'
 						stroke='white'
 						tick={{ fontSize: 12 }}
-						className='opacity-50'
+						className={styles.xAxis}
 					/>
 					<YAxis hide domain={['dataMin', 'dataMax + 0']} />
 

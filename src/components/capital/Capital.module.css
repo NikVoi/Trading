@@ -1,0 +1,42 @@
+.capitalContainer {
+	margin-top: 4rem;
+	text-transform: uppercase;
+}
+
+.capitalContent {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+
+.capitalTitle {
+	font-size: 1.25rem;
+	position: absolute;
+	top: -1.75rem;
+	left: 2.625rem;
+	font-weight: bold;
+	opacity: 0.5;
+}
+
+.capitalAmount {
+	font-size: 3.75rem;
+}
+
+.capitalDetails {
+	font-size: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.capitalRow {
+	display: flex;
+	justify-content: space-between;
+	min-width: 110px;
+}
+
+.label {
+	opacity: 0.5;
+	margin-bottom: 0.4rem;
+}

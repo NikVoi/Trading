@@ -1,11 +1,12 @@
-import Bots from '@/components/Bots'
-import Capital from '@/components/Capital'
-import Graph from '@/components/Graph'
-import Range from '@/components/Range'
+import Bots from '@/components/bots/Bots'
+import Capital from '@/components/capital/Capital'
+import Graph from '@/components/graph/Graph'
+import Range from '@/components/range/Range'
 import { TIME } from '@/constants/values'
 import jsonData from '@/data/data.min.json'
 import useLocalStorage from '@/hooks/localStorage'
 import { useEffect, useState } from 'react'
+import styles from './Dashboard.module.css'
 
 const Dashboard = () => {
 	const [active, setActive] = useLocalStorage('active', TIME[TIME.length - 1])
@@ -41,7 +42,7 @@ const Dashboard = () => {
 	}
 
 	return (
-		<section className='flex-1 flex flex-col justify-evenly'>
+		<section className={styles.dashboard}>
 			<Capital
 				trading_capital={jsonData.trading_capital}
 				balance={jsonData.balance}

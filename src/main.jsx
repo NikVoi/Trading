@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Header from './components/Header'
-import Navigation from './components/Navigation'
+import Header from './components/header/Header'
+import Navigation from './components/navigation/Navigation'
 import Dashboard from './pages/dashboard/Dashboard'
 import './styles/globals.css'
 

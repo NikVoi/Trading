@@ -1,0 +1,35 @@
+.rangeContainer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem;
+	gap: 5px;
+}
+
+.rangeTitle {
+	font-size: 1.4rem;
+	font-weight: bold;
+	opacity: 0.5;
+	padding: 0.5rem;
+	border-radius: 8px;
+}
+
+.rangeButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	border: 1px solid white;
+	border-radius: 24px;
+	padding: 0.5rem 1rem;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.rangeButton:hover {
+	opacity: 0.8;
+}
+
+.active {
+	opacity: 1;
+}
