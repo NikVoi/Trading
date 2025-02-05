@@ -10,33 +10,46 @@
 }
 
 .capitalTitle {
-	font-size: 1.25rem;
 	position: absolute;
-	top: -1.75rem;
-	left: 2.625rem;
+	top: -1.7rem;
+	left: 0rem;
+
 	font-weight: bold;
+	font-size: 1.25rem;
 	opacity: 0.5;
 }
 
 .capitalAmount {
+	position: relative;
 	font-size: 3.75rem;
+	font-weight: 300;
 }
 
 .capitalDetails {
-	font-size: 1.25rem;
+	font-size: 1.4rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	font-weight: bold;
 }
 
 .capitalRow {
 	display: flex;
 	justify-content: space-between;
-	min-width: 110px;
+	align-items: center;
+	min-width: 140px;
+}
+
+.capitalRow > span:last-child {
+	display: flex;
+	align-items: center;
+}
+
+.capitalRow > span:last-child > img {
+	width: 1.5rem;
+	margin-left: 0.5rem;
 }
 
 .label {
 	opacity: 0.5;
-	margin-bottom: 0.4rem;
 }

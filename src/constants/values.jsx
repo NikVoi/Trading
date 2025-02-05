@@ -21,11 +21,11 @@ export const TIME_LABELS = {
 	all_time: 'All time',
 }
 
-export const BOTS_COLOR = {
-	yellowbot: '#ffff00',
-	whitebot: '#000',
-	greenbot: '#008000',
-	redbot: '#ff0000',
-	bluebot: '#0000ff',
-	orangebot: '#ffa500',
+export const BOTS_IMG = {
+	yellowbot: './bots/yellow.png',
+	whitebot: './bots/empty.png',
+	greenbot: './bots/green.png',
+	redbot: './bots/red.png',
+	bluebot: './bots/blue.png',
+	orangebot: './bots/orange.png',
 }

@@ -1,6 +1,5 @@
-import { BOTS_COLOR } from '@/constants/values'
+import { BOTS_IMG } from '@/constants/values'
 import { useEffect, useState } from 'react'
-import { LiaRobotSolid } from 'react-icons/lia'
 import styles from './Bots.module.css'
 
 const Bots = ({ bots, active, setSelectedBot, selectedBot }) => {
@@ -14,7 +13,7 @@ const Bots = ({ bots, active, setSelectedBot, selectedBot }) => {
 		<ul className={styles.botsContainer}>
 			{updatedBots.map((bot, index) => {
 				const botNameKey = bot.name.toLowerCase().replace('_', '')
-				const iconColor = BOTS_COLOR[botNameKey] || BOTS_COLOR.default
+				const src = BOTS_IMG[botNameKey] || BOTS_IMG.default
 				const isSelected = selectedBot.name === bot.name
 
 				return (
@@ -23,10 +22,7 @@ const Bots = ({ bots, active, setSelectedBot, selectedBot }) => {
 						onClick={() => setSelectedBot(bot)}
 						className={`${styles.botItem} ${isSelected ? styles.selected : ''}`}
 					>
-						<LiaRobotSolid
-							className={styles.botIcon}
-							style={{ fill: iconColor }}
-						/>
+						<img src={src} className={styles.botImage} />
 						<span className={styles.botName}>{bot.name.replace('_', ' ')}</span>
 						<span
 							className={

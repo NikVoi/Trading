@@ -29,8 +29,10 @@
 	box-shadow: inset 0 0 15px 3px rgba(255, 255, 255, 0.1);
 }
 
-.botIcon {
-	font-size: 4rem;
+.botImage {
+	width: 4rem;
+	height: 4rem;
+
 	margin-bottom: 0.5rem;
 }
 
@@ -59,8 +61,11 @@
 	.botItem {
 		height: 120px;
 	}
-	.botIcon {
-		font-size: 5em;
+	.botImage {
+		width: 5rem;
+		height: 5rem;
+
+		margin-bottom: 0.5rem;
 	}
 	.botName {
 		font-size: 1.5rem;

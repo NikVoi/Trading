@@ -1,6 +1,7 @@
 import {
 	Area,
 	AreaChart,
+	CartesianGrid,
 	ResponsiveContainer,
 	Tooltip,
 	XAxis,
@@ -12,7 +13,7 @@ const CustomTooltip = ({ active, payload }) => {
 	if (active && payload && payload.length) {
 		return (
 			<div className={styles.tooltip}>
-				<p className={styles.tooltipText}>{`${payload[0].value}%`}</p>
+				<p className={styles.tooltipText}>{`+${payload[0].value}%`}</p>
 			</div>
 		)
 	}
@@ -22,15 +23,16 @@ const CustomTooltip = ({ active, payload }) => {
 const Graph = ({ chartData }) => {
 	return (
 		<div className={styles.graphContainer}>
-			<ResponsiveContainer width='100%'>
+			<ResponsiveContainer width='110%'>
 				<AreaChart data={chartData}>
+					<CartesianGrid strokeWidth='1' stroke='rgba(255, 255, 255, 0.1)' />
 					<XAxis
 						dataKey='date'
-						stroke='white'
-						tick={{ fontSize: 12 }}
+						stroke='rgba(255, 255, 255, 0.5)'
+						tick={{ fontSize: 10 }}
 						className={styles.xAxis}
 					/>
-					<YAxis hide domain={['dataMin', 'dataMax + 0']} />
+					<YAxis tickCount={8} hide domain={['dataMin - 10', 'dataMax + 10']} />
 
 					<Tooltip
 						content={<CustomTooltip />}

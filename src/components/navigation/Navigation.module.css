@@ -12,6 +12,7 @@
 }
 
 .navigationItem {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,12 +20,38 @@
 	text-align: center;
 	height: 100%;
 	cursor: pointer;
+}
+
+.notificationBadge {
+	content: '';
+	position: absolute;
+	top: -0rem;
+	right: -0.3rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	opacity: 1;
+
+	border-radius: 100%;
+
+	width: 1.5rem;
+	height: 1.5rem;
+
+	background-color: #fb9818;
+}
+
+.navigationIcon,
+.navigationTitle {
 	opacity: 0.5;
 	transition: opacity 0.2s ease-in-out;
 }
 
-.navigationItem:hover,
-.navigationItem.active {
+.navigationItem:hover .navigationIcon,
+.navigationItem:hover .navigationTitle,
+.navigationItem.active .navigationIcon,
+.navigationItem.active .navigationTitle {
 	opacity: 1;
 }
 

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from './Navigation.module.css'
 
 const Navigation = () => {
-	const [activeIndex, setActiveIndex] = useState(1)
+	const [activeIndex, setActiveIndex] = useState(0)
 
 	const handleClick = index => {
 		setActiveIndex(index)
@@ -16,12 +16,16 @@ const Navigation = () => {
 					<li
 						key={title}
 						className={`${styles.navigationItem} ${
-							activeIndex === index ? 'active' : ''
+							activeIndex === index ? styles.active : ''
 						}`}
 						onClick={() => handleClick(index)}
 					>
 						<p className={styles.navigationIcon}>{image}</p>
 						<p className={styles.navigationTitle}>{title}</p>
+
+						{index === NAVIGATION.length - 1 && (
+							<span className={styles.notificationBadge}>3</span>
+						)}
 					</li>
 				))}
 			</ul>
