@@ -28,7 +28,7 @@ const Dashboard = () => {
 		setChartData(generateChartData(active))
 	}
 
-	if (!data) {
+	if (!data || !data.bots) {
 		return <Loader />
 	}
 
