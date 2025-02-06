@@ -16,9 +16,17 @@ const Dashboard = () => {
 	const [selectedBot, setSelectedBot] = useLocalStorage('selectedBot', null)
 	const [chartData, setChartData] = useState([])
 
+	console.log(selectedBot)
+
 	useEffect(() => {
 		if (data) {
-			setSelectedBot(data.bots[0])
+			const isBotStillAvailable =
+				selectedBot && data.bots.some(bot => bot.name === selectedBot.name)
+
+			if (!isBotStillAvailable) {
+				setSelectedBot(data.bots[0])
+			}
+
 			setChartData(generateChartData(active))
 		}
 	}, [data, active])
